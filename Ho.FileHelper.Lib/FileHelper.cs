@@ -17,5 +17,11 @@ namespace Ho.FileHelper.Lib
             }
             return directory.FullName.ToString();
         }
+
+        public static string AppendDateTime(string fileName)
+        {
+            string appendedFileName = $"{fileName}{ DateTime.Now.ToString("yyyy-MM-dd HH.mm.ss") }.txt";
+            return appendedFileName;
+        }
     }
 }
