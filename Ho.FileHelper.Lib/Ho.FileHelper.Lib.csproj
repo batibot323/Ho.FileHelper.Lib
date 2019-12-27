@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Authors>Hani Herbert Ho</Authors>
+    <Company>Pointwest</Company>
+    <Product>FileHelper</Product>
   </PropertyGroup>
 
 </Project>
