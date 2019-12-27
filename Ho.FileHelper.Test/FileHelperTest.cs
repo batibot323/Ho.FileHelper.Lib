@@ -23,5 +23,14 @@ namespace Ho.FileHelper.Test
             string secondResult = AppendDateTime(fileName);
             Assert.NotEqual(firstResult, secondResult);
         }
+
+        [Fact]
+        public void GenerateFilePath_ShouldContain_FilePathWithFolderAndFileName()
+        {
+            string outputFolder = "results";
+            string fileName = "myFile";
+            string expected = @"C:\Users\herbert.ho\Documents\src\_CSharp\Useful Classes\Ho.FileHelper.Lib\results\myFile";
+            Assert.Contains(expected, GenerateFilePath(outputFolder, fileName));
+        }
     }
 }

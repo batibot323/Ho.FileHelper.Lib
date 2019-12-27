@@ -23,5 +23,11 @@ namespace Ho.FileHelper.Lib
             string appendedFileName = $"{fileName}{ DateTime.Now.ToString("yyyy-MM-dd HH.mm.ss") }.txt";
             return appendedFileName;
         }
+
+        public static string GenerateFilePath(string folderName, string fileName)
+        {
+            string generatedFilePath = Path.Combine(SolutionFolder(), folderName, AppendDateTime(fileName));
+            return generatedFilePath;
+        }
     }
 }
